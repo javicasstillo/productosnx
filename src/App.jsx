@@ -193,16 +193,16 @@ function App() {
     `;
 
     try {
-      await emailjs.send(
-        "service_fmgjno1",
-        "template_nz3jiyg",
-        {
-          to_name: cliente.nombre,
-          to_email: cliente.email,
-          message: htmlContent
-        },
-        "JIUVSc3n_dqzZhMU2"
-      );
+          await emailjs.send(
+      "service_h32922z",
+      "template_nz3jiyg",
+      {
+        to_name: cliente.nombre,
+        to_email: cliente.email,
+        message: htmlContent
+      },
+      "JIUVSc3n_dqzZhMU2"
+    );
 
       Swal.fire({
         icon: "success",
