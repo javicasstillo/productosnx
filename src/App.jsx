@@ -267,7 +267,7 @@ function App() {
   return (
     <div className="nx-wrapper">
       <div className="nx-card">
-        <h1 className="nx-title text-center">Correo X 🚀</h1>
+        <h1 className="nx-title text-center">Habitualidad X 🚀</h1>
 
         <form onSubmit={handleSubmit}>
           <input
