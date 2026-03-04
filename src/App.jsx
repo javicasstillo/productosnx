@@ -202,7 +202,7 @@ function App() {
         message: htmlContent
       },
       "JIUVSc3n_dqzZhMU2"
-    );
+    ); 
 
       Swal.fire({
         icon: "success",
