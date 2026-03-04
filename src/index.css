@@ -57,3 +57,10 @@ body {
   border-radius: 50px;
   font-weight: 800;
 }
+
+.btn-whatsapp{
+  background-color: #25D366 !important;
+  border-radius: 50px;
+  border: none;
+  padding: 14px 40px;
+}

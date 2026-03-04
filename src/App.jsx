@@ -3,6 +3,7 @@ import "./index.css";
 import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 
+
 /* =========================
    PRODUCTOS INFO COMPLETA
 ========================= */
@@ -316,16 +317,16 @@ function App() {
 
           <div className="text-center mt-4 d-flex justify-content-center gap-3">
 
-            <button className="nx-btn text-white">
-              Enviar Mail ✉️
+            <button className="nx-btn text-white d-flex gap-3">
+              <i class="bi bi-envelope"></i>  Enviar Mail 
             </button>
 
             <button
               type="button"
-              className="btn btn-success"
+              className=" text-white btn-whatsapp d-flex gap-3 "
               onClick={enviarWhatsApp}
             >
-              Enviar WhatsApp 💬
+             <i class="bi bi-whatsapp"></i>  Enviar WhatsApp 
             </button>
 
           </div>
