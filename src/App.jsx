@@ -141,9 +141,10 @@ function App() {
   }));
 
   const [cliente, setCliente] = useState({
-    nombre: "",
-    email: "",
-    productosSeleccionados: []
+  nombre: "",
+  email: "",
+  telefono: "",
+  productosSeleccionados: []
   });
 
   const handleCheckboxChange = (productoId) => {
@@ -217,6 +218,51 @@ function App() {
     }
   };
 
+  const enviarWhatsApp = () => {
+
+  if(cliente.productosSeleccionados.length === 0){
+    Swal.fire({
+      icon: "warning",
+      title: "Seleccioná al menos un producto"
+    });
+    return;
+  }
+
+  if(!cliente.telefono){
+    Swal.fire({
+      icon: "warning",
+      title: "Ingresá un número de WhatsApp"
+    });
+    return;
+  }
+
+  const productosSeleccionadosInfo = cliente.productosSeleccionados.map(
+    (id) => ({
+      id,
+      ...productosInfo[id]
+    })
+  );
+
+  const mensaje = `
+    Hola ${cliente.nombre} 👋
+
+    Te compartimos información para que aproveches mejor tu cuenta Naranja X 💜
+
+    ${productosSeleccionadosInfo.map(p => `
+    🔸 ${p.titulo}
+    ${p.resumen}
+    `).join("\n")}
+
+    Si tenés dudas podés escribirnos cuando quieras.
+
+    Equipo Naranja X 🚀
+    `;
+
+      const url = `https://wa.me/${cliente.telefono}?text=${encodeURIComponent(mensaje)}`;
+
+      window.open(url, "_blank");
+    };
+
   return (
     <div className="nx-wrapper">
       <div className="nx-card">
@@ -240,6 +286,15 @@ function App() {
             }
           />
 
+          
+            <input
+              type="text"
+              className="form-control mb-3"
+              placeholder="Whatsapp"
+              onChange={(e)=>setCliente({...cliente, telefono:e.target.value})}
+            />
+          
+
           <div className="row">
             {productosNX.map((producto) => (
               <div key={producto.id} className="col-md-6 mb-3">
@@ -257,9 +312,25 @@ function App() {
             ))}
           </div>
 
-          <button className="nx-btn text-white mt-4">
-            Enviar Mail ✨
-          </button>
+          
+
+          <div className="text-center mt-4 d-flex justify-content-center gap-3">
+
+            <button className="nx-btn text-white">
+              Enviar Mail ✉️
+            </button>
+
+            <button
+              type="button"
+              className="btn btn-success"
+              onClick={enviarWhatsApp}
+            >
+              Enviar WhatsApp 💬
+            </button>
+
+          </div>
+
+          
         </form>
       </div>
     </div>
