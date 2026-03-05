@@ -199,22 +199,17 @@ return `
 <table width="600" align="center" style="background:#ffffff;border-radius:10px;overflow:hidden;">
 
 <tr>
-<td style="background:#4b0082;padding:30px;text-align:center;">
+<td style="background:#4b0082;padding:35px;text-align:center;">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_Naranja_X.png" width="140"/>
+<img 
+src="https://upload.wikimedia.org/wikipedia/commons/3/35/NaranjaX-logo.svg"
+alt="Naranja X"
+width="150"
+style="display:block;margin:auto;margin-bottom:10px;"
+/>
 
-</td>
-</tr>
-
-<tr>
-<td style="padding:35px;">
-
-<h1 style="color:#4b0082;">
-Hola ${cliente.nombre} 👋
-</h1>
-
-<p>
-Te compartimos información útil sobre algunas funcionalidades de tu cuenta Naranja X.
+<p style="color:white;font-size:13px;margin:0;opacity:0.85;">
+Educación financiera para aprovechar mejor tu cuenta
 </p>
 
 </td>
