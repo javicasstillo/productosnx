@@ -280,10 +280,6 @@ Conocer más
 <tr>
 <td style="background:#4b0082;padding:25px;text-align:center;color:white;font-size:13px;">
 
-<p style="margin:0;">
-Gracias por confiar en <strong>Naranja X</strong> 💜
-</p>
-
 <p style="margin-top:8px;opacity:0.8;">
 Este correo fue generado para brindarte información sobre funcionalidades disponibles en tu cuenta.
 </p>
