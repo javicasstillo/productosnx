@@ -298,6 +298,25 @@ Este correo fue generado para brindarte información sobre funcionalidades dispo
 `;
 };
 
+const generarMensajeWhatsApp = (productos, cliente) => {
+
+  const intro = `Hola ${cliente.nombre} 👋🏻
+
+Te compartimos información de lo que charlamos en tu visita por nuestra sucursal, para que aproveches mejor tu cuenta *Naranja X*  💜🧡`;
+
+  const bloques = productos.map(p => {
+    const bullets = p.uso.slice(0, 3).map(item => `• ${item}`).join("\n");
+    return `\n*${p.titulo}*\n${p.resumen}\n${bullets}`;
+  }).join("\n");
+
+  const cierre = `\n\nSi querés explorar más funciones de la app, podés visitar:
+https://www.naranjax.com
+
+Equipo Naranja X`;
+
+  return `${intro}\n${bloques}${cierre}`;
+};
+
 function App() {
   const productosNX = Object.keys(productosInfo).map((id) => ({
     id,
@@ -389,7 +408,7 @@ function App() {
 
   const enviarWhatsApp = () => {
 
-  if(cliente.productosSeleccionados.length === 0){
+  if (cliente.productosSeleccionados.length === 0) {
     Swal.fire({
       icon: "warning",
       title: "Seleccioná al menos un producto"
@@ -397,7 +416,7 @@ function App() {
     return;
   }
 
-  if(!cliente.telefono){
+  if (!cliente.telefono) {
     Swal.fire({
       icon: "warning",
       title: "Ingresá un número de WhatsApp"
@@ -412,25 +431,12 @@ function App() {
     })
   );
 
-  const mensaje = `
-    Hola ${cliente.nombre} 👋
+  const mensaje = generarMensajeWhatsApp(productosSeleccionadosInfo, cliente);
 
-    Te compartimos información para que aproveches mejor tu cuenta Naranja X 💜
+  const url = `https://wa.me/${cliente.telefono}?text=${encodeURIComponent(mensaje)}`;
 
-    ${productosSeleccionadosInfo.map(p => `
-    🔸 ${p.titulo}
-    ${p.resumen}
-    `).join("\n")}
-
-    Si tenés dudas podés escribirnos cuando quieras.
-
-    Equipo Naranja X 🚀
-    `;
-
-      const url = `https://wa.me/${cliente.telefono}?text=${encodeURIComponent(mensaje)}`;
-
-      window.open(url, "_blank");
-    };
+  window.open(url, "_blank");
+};
 
   return (
     <div className="nx-wrapper">
