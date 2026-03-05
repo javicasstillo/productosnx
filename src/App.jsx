@@ -219,7 +219,7 @@ font-size:13px;
 margin-top:8px;
 opacity:0.85;
 ">
-Educación financiera para aprovechar mejor tu cuenta
+Resumen de nuestra conversacion en sucursal.
 </p>
 
 </td>
