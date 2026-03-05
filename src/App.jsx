@@ -8,131 +8,250 @@ import emailjs from "@emailjs/browser";
    PRODUCTOS INFO COMPLETA
 ========================= */
 
-const productosInfo = {
+export const productosInfo = {
+
   caja_pesos: {
-    titulo: "Tu cuenta digital para manejar tu dinero sin límites",
+    titulo: "Tu cuenta digital para manejar tu dinero todos los días",
     resumen:
-      "Administrá tus pesos y dólares desde un solo lugar, generando rendimientos diarios sin costos de mantenimiento.",
+      "Con tu cuenta Naranja X podés administrar tu dinero desde el celular de forma simple, rápida y sin costos de mantenimiento.",
     uso: [
-      "Transferencias instantáneas las 24 h.",
-      "Pagos con QR en cualquier comercio.",
-      "Pago de más de 4.000 servicios.",
-      "Recargas inmediatas de celular y transporte.",
-      "Rendimientos automáticos sobre tu saldo."
+      "Transferí y recibí dinero al instante las 24 horas usando CBU, CVU o alias.",
+      "Pagá con QR en miles de comercios sin importar la billetera.",
+      "Pagá servicios y facturas sin hacer filas.",
+      "Recargá celular o transporte en segundos.",
+      "Generá rendimientos diarios sobre tu saldo disponible."
     ],
-    frase: "Tu dinero siempre disponible, creciendo todos los días."
+    frase:
+      "Una cuenta pensada para que tu dinero esté siempre disponible y creciendo."
   },
+
   caja_dolares: {
     titulo: "Tu cuenta en dólares gratis y 100% digital",
     resumen:
-      "Gestioná tus dólares sin costos de mantenimiento y operá desde la app cuando quieras.",
+      "Gestioná tus dólares desde la app Naranja X sin costos de mantenimiento y con total control desde tu celular.",
     uso: [
-      "Transferencias en dólares.",
-      "Compra y venta de Dólar MEP.",
-      "Pagos internacionales.",
-      "Cancelación anticipada en USD."
+      "Recibí y enviá transferencias en dólares desde y hacia cuentas argentinas.",
+      "Comprá y vendé Dólar MEP desde la app.",
+      "Pagá consumos internacionales con tu tarjeta.",
+      "Cancelá compras en dólares y evitá impuestos."
     ],
-    frase: "Tus dólares, disponibles y bajo control."
+    frase:
+      "Tus dólares siempre disponibles cuando los necesites."
   },
+
   dolar_oficial: {
     titulo: "Comprá y vendé dólares al tipo de cambio oficial",
-    resumen: "Operá dólar oficial sin comisiones ni impuestos.",
+    resumen:
+      "Desde la app Naranja X podés operar dólar oficial de forma simple, directa y sin comisiones.",
     uso: [
-      "Compra directa desde la app.",
-      "Transferencias en USD.",
-      "Pagos en dólares.",
-      "Uso en el exterior."
+      "Comprá o vendé dólares en pocos pasos.",
+      "Transferí dólares a otras cuentas.",
+      "Pagá consumos en dólares.",
+      "Usalos en el exterior con tu tarjeta."
     ],
-    frase: "Accedé al dólar oficial de forma simple."
+    frase:
+      "Una forma simple y transparente de operar con dólares."
   },
+
   dolar_mep: {
     titulo: "Comprá Dólar MEP y recibilo en el día",
-    resumen: "Operá sin parking y sin límites.",
+    resumen:
+      "Accedé al dólar MEP desde la app Naranja X de forma rápida, segura y sin límites de compra.",
     uso: [
-      "Compra en simples pasos.",
-      "Acreditación en el día.",
-      "Venta cuando quieras.",
-      "100% digital y seguro."
+      "Operá directamente desde tu cuenta Naranja X.",
+      "Comprá dólares sin restricciones.",
+      "Recibí los dólares en tu cuenta en el día.",
+      "Vendelos cuando quieras."
     ],
-    frase: "Accedé al dólar de forma ágil."
+    frase:
+      "Una alternativa ágil para acceder al dólar."
   },
+
   frascos: {
-    titulo: "Organizá tus metas y hacé crecer tu dinero",
-    resumen: "Guardá tu dinero entre 7 y 180 días con rendimientos.",
+    titulo: "Ahorrá para tus metas con Frascos",
+    resumen:
+      "Frascos te permite separar tu dinero para diferentes objetivos mientras genera rendimientos.",
     uso: [
-      "Creá frascos para cada objetivo.",
-      "Elegí el plazo.",
-      "Generá rendimientos.",
-      "Organizá tu ahorro."
+      "Creá un frasco para cada meta.",
+      "Elegí plazos desde 7 hasta 180 días.",
+      "Generá rendimientos automáticos.",
+      "Organizá tus ahorros fácilmente."
     ],
-    frase: "Ahorrá con propósito."
+    frase:
+      "Convertí tus metas en objetivos claros y hacé crecer tu dinero."
   },
+
   pago_servicios: {
     titulo: "Pagá todos tus servicios desde la app",
-    resumen: "Más de 3000 empresas disponibles.",
+    resumen:
+      "Con Naranja X podés pagar miles de servicios e impuestos sin salir de tu casa.",
     uso: [
-      "Escaneá facturas.",
-      "Recibí alertas.",
-      "Pagá en cuotas.",
-      "Descargá comprobantes."
+      "Pagá facturas escaneando el código de barras.",
+      "Recibí recordatorios antes del vencimiento.",
+      "Pagá con dinero en cuenta o en cuotas.",
+      "Accedé a tus comprobantes cuando quieras."
     ],
-    frase: "Organizá tus pagos en un solo lugar."
+    frase:
+      "Todos tus pagos organizados en un solo lugar."
   },
+
   prestamos: {
     titulo: "Pedí tu préstamo personal desde la app",
-    resumen: "Hasta $9.000.000 con cuotas fijas.",
+    resumen:
+      "Obtené un préstamo de forma rápida y 100% digital directamente desde Naranja X.",
     uso: [
-      "Cancelá deudas.",
-      "Impulsá tu negocio.",
-      "Planificá un viaje.",
-      "Simulá hasta 48 cuotas."
+      "Pedí hasta $9.000.000 desde la app.",
+      "Elegí hasta 48 cuotas fijas.",
+      "Recibí el dinero al instante en tu cuenta.",
+      "Cancelá anticipadamente si lo necesitás."
     ],
-    frase: "Tu próxima meta puede empezar hoy."
+    frase:
+      "Una solución rápida para impulsar tus proyectos."
   },
+
   cuotas_sin_tarjeta: {
-    titulo: "Comprá en cuotas sin usar tu tarjeta",
-    resumen: "Financiá compras en hasta 6 cuotas.",
+    titulo: "Comprá en cuotas sin usar tarjeta de crédito",
+    resumen:
+      "Pagá con QR y financiá tus compras en cuotas desde la app Naranja X.",
     uso: [
-      "Escaneá QR.",
-      "Elegí cuotas.",
-      "Pagá 30 días después.",
-      "Seguimiento desde Préstamos."
+      "Escaneá cualquier código QR.",
+      "Elegí entre 1, 3 o hasta 6 cuotas.",
+      "Pagá tu primera cuota 30 días después.",
+      "Seguimiento desde la sección Préstamos."
     ],
-    frase: "Comprá hoy y pagalo a tu ritmo."
+    frase:
+      "Comprá hoy y pagalo en cuotas."
   },
+
   tarjeta_credito: {
-    titulo: "Solicitá tu tarjeta 100% online",
-    resumen: "Tarjeta virtual disponible al instante.",
+    titulo: "Tu tarjeta de crédito Naranja X en minutos",
+    resumen:
+      "Solicitá tu tarjeta de crédito desde la app y empezá a usarla al instante.",
     uso: [
-      "Cuotas cero interés.",
-      "Compras internacionales.",
-      "Financiación flexible.",
-      "Promos exclusivas."
+      "Comprá en Argentina y el exterior.",
+      "Pagá en cuotas con promociones.",
+      "Financiá el resumen si lo necesitás.",
+      "Beneficios exclusivos en transporte y viajes."
     ],
-    frase: "Más libertad para comprar."
+    frase:
+      "Más libertad para comprar."
   },
+
   tarjeta_credito_virtual: {
-    titulo: "Tu tarjeta virtual lista al instante",
-    resumen: "Comprá online sin esperar el plástico.",
+    titulo: "Tu tarjeta virtual lista para usar al instante",
+    resumen:
+      "Con la tarjeta de crédito virtual podés empezar a comprar online sin esperar el plástico.",
     uso: [
-      "Disponible en segundos.",
-      "CVV dinámico.",
-      "Compras en dólares.",
-      "100% digital."
+      "Disponible inmediatamente desde la app.",
+      "CVV dinámico para mayor seguridad.",
+      "Compras online en pesos o dólares.",
+      "Sin costos adicionales."
     ],
-    frase: "Comprá hoy mismo."
+    frase:
+      "Comprá online en segundos."
   },
+
   tarjeta_debito: {
-    titulo: "Usá tu plata al instante",
-    resumen: "Gratis y vinculada a tu cuenta.",
+    titulo: "Pagá con tu dinero al instante",
+    resumen:
+      "La tarjeta de débito Naranja X te permite usar el dinero de tu cuenta de forma simple y segura.",
     uso: [
-      "Pagá con tu saldo.",
-      "Retirá efectivo.",
-      "Usala en transporte.",
+      "Pagá en comercios físicos y online.",
+      "Retirá efectivo en comercios adheridos.",
+      "Usala en transporte público.",
       "Comprá en el exterior."
     ],
-    frase: "Simple y directa."
+    frase:
+      "La forma más simple de usar tu dinero."
   }
+
+};
+
+const generarHTMLMail = (productos, cliente) => {
+
+const bloques = productos.map(p => `
+<tr>
+<td style="padding:30px;border-bottom:1px solid #eee;">
+
+<h2 style="color:#ff6a00;font-size:20px;margin-bottom:10px;">
+${p.titulo}
+</h2>
+
+<p style="color:#444;font-size:15px;">
+${p.resumen}
+</p>
+
+<ul style="padding-left:18px;margin-top:12px;">
+${p.uso.map(item => `<li>${item}</li>`).join("")}
+</ul>
+
+<p style="margin-top:15px;font-weight:bold;color:#4b0082;">
+${p.frase}
+</p>
+
+</td>
+</tr>
+`).join("");
+
+return `
+<div style="background:#f4f4f4;padding:40px 0;font-family:Arial,Helvetica,sans-serif;">
+
+<table width="600" align="center" style="background:#ffffff;border-radius:10px;overflow:hidden;">
+
+<tr>
+<td style="background:#4b0082;padding:30px;text-align:center;">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_Naranja_X.png" width="140"/>
+
+</td>
+</tr>
+
+<tr>
+<td style="padding:35px;">
+
+<h1 style="color:#4b0082;">
+Hola ${cliente.nombre} 👋
+</h1>
+
+<p>
+Te compartimos información útil sobre algunas funcionalidades de tu cuenta Naranja X.
+</p>
+
+</td>
+</tr>
+
+${bloques}
+
+<tr>
+<td style="padding:30px;text-align:center;background:#fafafa;">
+
+<a href="https://www.naranjax.com"
+style="
+background:#ff6a00;
+color:white;
+padding:14px 28px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+">
+Conocer más
+</a>
+
+</td>
+</tr>
+
+<tr>
+<td style="background:#4b0082;padding:25px;text-align:center;color:white;font-size:13px;">
+
+<p>Gracias por confiar en <strong>Naranja X</strong> 💜</p>
+
+</td>
+</tr>
+
+</table>
+
+</div>
+`;
 };
 
 function App() {
@@ -160,64 +279,69 @@ function App() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (cliente.productosSeleccionados.length === 0) {
-      Swal.fire({
-        icon: "warning",
-        title: "Seleccioná al menos un producto"
-      });
-      return;
-    }
+  if (!cliente.nombre || !cliente.email) {
+    Swal.fire({
+      icon: "warning",
+      title: "Faltan datos",
+      text: "Ingresá el nombre y el mail del cliente"
+    });
+    return;
+  }
 
-    const seleccionados = cliente.productosSeleccionados.map(
-      (id) => productosInfo[id]
+  if (cliente.productosSeleccionados.length === 0) {
+    Swal.fire({
+      icon: "warning",
+      title: "Seleccioná al menos un producto"
+    });
+    return;
+  }
+
+  try {
+
+    // productos con info completa
+    const productosSeleccionadosInfo = cliente.productosSeleccionados.map(
+      (id) => ({
+        id,
+        ...productosInfo[id]
+      })
     );
 
-    const bloques = seleccionados
-      .map(
-        (p) => `
-      <div style="margin-bottom:30px;">
-        <h2 style="color:#ff6a00;">${p.titulo}</h2>
-        <p>${p.resumen}</p>
-        <ul>${p.uso.map((item) => `<li>${item}</li>`).join("")}</ul>
-        <p><strong>${p.frase}</strong></p>
-      </div>
-      <hr/>
-    `
-      )
-      .join("");
+    // generar html del mail
+    const htmlContent = generarHTMLMail(productosSeleccionadosInfo, cliente);
 
-    const htmlContent = `
-      <div style="font-family:Arial;padding:20px;">
-        ${bloques}
-      </div>
-    `;
-
-    try {
-          await emailjs.send(
+    // enviar mail
+    await emailjs.send(
       "service_h32922z",
       "template_nz3jiyg",
       {
-        to_name: cliente.nombre,
         to_email: cliente.email,
+        to_name: cliente.nombre,
         message: htmlContent
       },
       "JIUVSc3n_dqzZhMU2"
-    ); 
+    );
 
-      Swal.fire({
-        icon: "success",
-        title: "Mail enviado correctamente 🚀"
-      });
-    } catch (error) {
-      console.error(error);
-      Swal.fire({
-        icon: "error",
-        title: "Error al enviar el correo"
-      });
-    }
-  };
+    Swal.fire({
+      icon: "success",
+      title: "Correo enviado 🚀",
+      text: "El mail fue enviado correctamente al cliente",
+      confirmButtonColor: "#ff6a00"
+    });
+
+  } catch (error) {
+
+    console.error(error);
+
+    Swal.fire({
+      icon: "error",
+      title: "Error al enviar el correo",
+      text: "Revisar la configuración en EmailJS"
+    });
+
+  }
+};
 
   const enviarWhatsApp = () => {
 
