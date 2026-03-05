@@ -177,12 +177,12 @@ const bloques = productos.map(p => `
 ${p.titulo}
 </h2>
 
-<p style="color:#444;font-size:15px;">
+<p style="color:#444;font-size:15px;line-height:1.6;">
 ${p.resumen}
 </p>
 
-<ul style="padding-left:18px;margin-top:12px;">
-${p.uso.map(item => `<li>${item}</li>`).join("")}
+<ul style="padding-left:18px;margin-top:12px;color:#555;font-size:14px;">
+${p.uso.map(item => `<li style="margin-bottom:6px;">${item}</li>`).join("")}
 </ul>
 
 <p style="margin-top:15px;font-weight:bold;color:#4b0082;">
@@ -194,33 +194,73 @@ ${p.frase}
 `).join("");
 
 return `
+
 <div style="background:#f4f4f4;padding:40px 0;font-family:Arial,Helvetica,sans-serif;">
 
 <table width="600" align="center" style="background:#ffffff;border-radius:10px;overflow:hidden;">
 
+<!-- HEADER -->
 <tr>
 <td style="background:#4b0082;padding:35px;text-align:center;">
 
-<img 
-src="https://upload.wikimedia.org/wikipedia/commons/3/35/NaranjaX-logo.svg"
-alt="Naranja X"
-width="150"
-style="display:block;margin:auto;margin-bottom:10px;"
-/>
+<p style="
+color:white;
+font-size:28px;
+font-weight:bold;
+margin:0;
+letter-spacing:1px;
+">
+Naranja X
+</p>
 
-<p style="color:white;font-size:13px;margin:0;opacity:0.85;">
+<p style="
+color:white;
+font-size:13px;
+margin-top:8px;
+opacity:0.85;
+">
 Educación financiera para aprovechar mejor tu cuenta
 </p>
 
 </td>
 </tr>
 
+<!-- MAIN -->
+<tr>
+<td style="padding:35px;">
+
+<h1 style="color:#4b0082;margin-bottom:15px;font-size:24px;">
+Hola ${cliente.nombre} 👋
+</h1>
+
+<p style="font-size:15px;color:#444;line-height:1.6;">
+Queremos ayudarte a aprovechar al máximo todas las funcionalidades que tenés disponibles en <strong>Naranja X</strong>.
+</p>
+
+<p style="font-size:15px;color:#444;line-height:1.6;">
+Te compartimos información útil sobre algunos productos que pueden ayudarte a organizar mejor tu dinero, simplificar tus pagos y aprovechar todos los beneficios de la app.
+</p>
+
+</td>
+</tr>
+
+<!-- PRODUCTOS -->
 ${bloques}
 
+<!-- CTA -->
 <tr>
 <td style="padding:30px;text-align:center;background:#fafafa;">
 
-<a href="https://www.naranjax.com"
+<h2 style="color:#4b0082;margin-bottom:15px;">
+Descubrí todo lo que podés hacer con Naranja X
+</h2>
+
+<p style="color:#555;font-size:15px;margin-bottom:25px;">
+Ingresá a la app y explorá todas las herramientas disponibles para simplificar tu día a día.
+</p>
+
+<a 
+href="https://www.naranjax.com"
 style="
 background:#ff6a00;
 color:white;
@@ -228,6 +268,7 @@ padding:14px 28px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
+display:inline-block;
 ">
 Conocer más
 </a>
@@ -235,10 +276,21 @@ Conocer más
 </td>
 </tr>
 
+<!-- FOOTER -->
 <tr>
 <td style="background:#4b0082;padding:25px;text-align:center;color:white;font-size:13px;">
 
-<p>Gracias por confiar en <strong>Naranja X</strong> 💜</p>
+<p style="margin:0;">
+Gracias por confiar en <strong>Naranja X</strong> 💜
+</p>
+
+<p style="margin-top:8px;opacity:0.8;">
+Este correo fue generado para brindarte información sobre funcionalidades disponibles en tu cuenta.
+</p>
+
+<p style="margin-top:10px;font-size:12px;opacity:0.7;">
+© Naranja X — Todos los derechos reservados
+</p>
 
 </td>
 </tr>
@@ -246,6 +298,7 @@ Conocer más
 </table>
 
 </div>
+
 `;
 };
 
