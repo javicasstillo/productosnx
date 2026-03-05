@@ -433,7 +433,7 @@ function App() {
 
   const mensaje = generarMensajeWhatsApp(productosSeleccionadosInfo, cliente);
 
-  const url = `https://wa.me/${cliente.telefono}?text=${encodeURIComponent(mensaje)}`;
+  const url = `https://api.whatsapp.com/send?phone=${cliente.telefono}&text=${encodeURIComponent(mensaje)}`;
 
   window.open(url, "_blank");
 };
